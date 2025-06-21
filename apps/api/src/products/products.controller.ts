@@ -1,10 +1,11 @@
 import { Body, Controller, Post } from '@nestjs/common';
 import { ProductsService } from './products.service';
+import { CreateProductRequest } from '@repo/types';
 
 @Controller('products')
 export class ProductsController {
   constructor(private readonly productsService: ProductsService) {}
 
   @Post()
-  async createProduct(@Body() createProductRequest) {}
+  async createProduct(@Body() createProductRequest: CreateProductRequest) {}
 }
