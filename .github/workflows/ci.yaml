@@ -9,9 +9,8 @@ jobs:
     name: Build and test
     runs-on: ubuntu-latest
     env:
-      API_URL: http://localhost:3000
       TURBO_TOKEN: ${{ secrets.TURBO_TOKEN }}
-      TURBO_TEAM: ${{ secrets.TURBO_TEAM }}
+      TURBO_TEAM: ${{ vars.TURBO_TEAM }}
     steps:
       - name: Check out code
         uses: actions/checkout@v4
